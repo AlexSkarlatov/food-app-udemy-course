@@ -13,7 +13,10 @@ export class ShoppingListComponent implements OnInit {
     new Ingredient('tomato', 10)
 
   ];
-
+  onAddIng(ing: Ingredient){
+    //add this param to the ingredients array
+    this.ingredients.push(ing);
+  }
 
   constructor() { }
 
