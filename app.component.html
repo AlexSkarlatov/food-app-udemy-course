@@ -1,10 +1,9 @@
-<div>
-  <div>
-    <app-header></app-header>
-    <!-- <h1>this is the recipe list</h1>
-    <app-recipe-list></app-recipe-list> -->
-    <!-- float right code here put like a picture of food or something -->
-    <app-recipes></app-recipes>
-    <app-shopping-list></app-shopping-list>
+<app-header (featureSelectedEvent)="onNavigate($event)"></app-header>
+<div class="container">
+  <div class="row">
+    <div class="col-md-12">
+      <app-recipes *ngIf="loadedFeature === 'recipe'"></app-recipes>
+      <app-shopping-list *ngIf="loadedFeature !== 'recipe'"></app-shopping-list>
+    </div>
   </div>
 </div>
