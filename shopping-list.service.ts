@@ -24,7 +24,7 @@ export class ShoppingListService {
     // return this.ingredients.slice();
   }
   addIngredients(ings: Ingredient[]){
-    this.ingredients.push(...ings07);
+    this.ingredients.push(...ings);
     this.ingredientsChanged.emit(this.ingredients.slice());
     //this one has too many unnecessary event emisions
     // for(let ingredient of ingredients){
